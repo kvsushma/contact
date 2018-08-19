@@ -8,3 +8,6 @@
 <% @contact_list.contact_list_mappings.each do |contact_list_mapping| %>
     <li ><%= link_to contact_list_mapping.contact.name, contact_path(contact_list_mapping.contact) %></li>
 <% end %>
+
+
+Back To Contacts <%= link_to 'Back', contacts_path %>
