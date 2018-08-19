@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+
+
+<%= @contact.name %>  is associated with 
+
+<% @contact.contact_lists.each do |contact_list| %>
+  <%= link_to contact_list.name, contact_list_path(contact_list) %>
+<% end %>
+
+
+<br> <br>
+<%= link_to 'Edit', edit_contact_path(@contact) %> | <%= link_to 'Back', contacts_path %>
